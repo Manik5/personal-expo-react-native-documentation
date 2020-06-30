@@ -4,7 +4,6 @@ import {
   FlatList,
   Text,
   StyleSheet,
-  Button,
   TouchableOpacity
 } from 'react-native';
 
@@ -44,16 +43,16 @@ const IndexScreen = ({ navigation }) => {
 };
 
 IndexScreen.navigationOptions = ({ navigation }) => {
-	return {
-		headerRight: () =>
-		<TouchableOpacity onPress={() => navigation.navigate('Create') }>
-			<Feather
-				name="plus"
-				size={30}
-				color='black'
-			/>
-		</TouchableOpacity>
-	}
+  return {
+    headerRight: () =>
+    <TouchableOpacity onPress={() => navigation.navigate('Create') }>
+      <Feather
+        name="plus"
+        size={30}
+        color='black'
+      />
+    </TouchableOpacity>
+  }
 }
 
 const styles = StyleSheet.create({
