@@ -35,8 +35,10 @@ const addBlogPost = (dispatch) => {
     dispatch({
       type: 'ADD_BLOG_POST',
       payload: { title, content}
-    })
-    callback();
+    });
+    if (callback) {
+      callback();
+    }
   }
 };
 
@@ -47,11 +49,14 @@ const deleteBlogPost = dispatch => {
 };
 
 const editBlogPost = dispatch => {
-  return (id, title, content) => {
+  return (id, title, content, callback) => {
     dispatch({
       type: 'EDIT_BLOG_POST',
       payload: { id, title, content }
-    })
+    });
+    if (callback) {
+      callback();
+    }
   };
 };
 
