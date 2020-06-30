@@ -1,4 +1,3 @@
-
 import createDataContext from './createDataContext';
 
 
@@ -39,5 +38,6 @@ const deleteBlogPost = dispatch => {
 export const { Context, Provider } = createDataContext(
   blogReducer,
   { addBlogPost, deleteBlogPost },
-  []
+  // Sample post that will appear on the initial screen"
+  [{ title: 'TEST POST', content: 'TEST CONTENT', id: 1}]
 );
