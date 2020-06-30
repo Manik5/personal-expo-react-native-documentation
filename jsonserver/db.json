@@ -1,9 +1,29 @@
 {
   "blogposts": [
-		{
-			"id": 1,
-			"title": "API POST",
-			"content": "content for my post"
-		}
-	]
+    {
+      "id": 1,
+      "title": "API POST",
+      "content": "content for my post"
+    },
+    {
+      "title": "Mew poat",
+      "content": "Hkljb",
+      "id": 2
+    },
+    {
+      "title": "Third post",
+      "content": "Vekkdivs",
+      "id": 3
+    },
+    {
+      "title": "Four",
+      "content": "Dgyh",
+      "id": 4
+    },
+    {
+      "title": "Five",
+      "content": "Gkigcb",
+      "id": 5
+    }
+  ]
 }
