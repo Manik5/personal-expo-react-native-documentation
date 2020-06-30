@@ -1,0 +1,9 @@
+Client ID
+dWjrslaqYTxYAM00QVrdrQ
+
+API Key
+0KGIYtP8jvxaDdKAwh9Pk7R22n_qaATh5w0iBxJjlAOngdSMn1jl0KNJ5DndXiFISx70buT1yaBn-rreGzXC5fN0RPboX_UDpbaIGu2y3E9hvveeS0TfPc4fDx7yXnYx
+
+https://api.yelp.com/v3/businesses/{id}
+
+https://api.yelp.com/v3/businesses/search
