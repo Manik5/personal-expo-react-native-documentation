@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, StyleSheet, View } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 const SignupScreen = props => {
-  <View>
-    <Text>SignupScreen</Text>
-  </View>
+	return(
+	  <View>
+	    <Text>SignupScreen</Text>
+	  </View>
+	)
 };
 
 const styles = StyleSheet.create({

@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, StyleSheet, View } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 const TrackListScreen = props => {
-  <View>
-    <Text>TrackListScreen</Text>
-  </View>
+	return (
+	  <View>
+	    <Text>TrackListScreen</Text>
+	  </View>
+	)
 };
 
 const styles = StyleSheet.create({
