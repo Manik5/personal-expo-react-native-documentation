@@ -1,6 +1,6 @@
-const moongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-const pointSchema = new moongoose.Schema({
+const pointSchema = new mongoose.Schema({
   timestamp: Number,
   coords: {
     latitude: Number,
@@ -12,9 +12,9 @@ const pointSchema = new moongoose.Schema({
   }
 });
 
-const trackSchema = new moongoose.Schema({
+const trackSchema = new mongoose.Schema({
   userId: {
-    type: moongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   },
   name: {
@@ -24,4 +24,4 @@ const trackSchema = new moongoose.Schema({
   locations: [pointSchema]
 });
 
-moongoose.model('Track', trackSchema);
+mongoose.model('Track', trackSchema);

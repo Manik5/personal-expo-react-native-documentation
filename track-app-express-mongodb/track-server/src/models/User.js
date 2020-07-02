@@ -1,7 +1,7 @@
-const moongoose = require('mongoose');
+const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const userSchema = new moongoose.Schema({
+const userSchema = new mongoose.Schema({
   email: {
     type: String,
     unique: true,
@@ -54,4 +54,4 @@ userSchema.methods.comparePassword = function(candidatePassword) {
   });
 };
 
-moongoose.model('User', userSchema);
+mongoose.model('User', userSchema);
