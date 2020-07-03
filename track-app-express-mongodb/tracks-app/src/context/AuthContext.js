@@ -12,6 +12,8 @@ const authReducer = (state, action) => {
       return { errorMessage: '', token: action.payload };
     case 'CLEAR_ERROR_MESSAGE':
       return { ...state, errorMessage: ''};
+    case 'SIGNOUT':
+      return { token: null, errorMessage: ''}
     default:
       return state;
   }
@@ -47,7 +49,6 @@ const signup = (dispatch) => async ({ email, password }) => {
 };
 
 const signin = (dispatch) => async ({ email, password }) => {
-  // Try to signin
   try {
     const response = await trackerApi.post('/signin', { email, password });
     await AsyncStorage.setItem('token', response.data.token);
@@ -60,16 +61,14 @@ const signin = (dispatch) => async ({ email, password }) => {
       payload: 'Something went wrong with sign in'
     });
   };
-  // Handle success by updating state
-
-  // Handle failure by showing error message
 };
 
-const signout = (dispatch) => {
-  return () => {
-    // somehow sign out
-  };
+const signout = (dispatch) => async () => {
+  await AsyncStorage.removeItem('token');
+  dispatch({ type: 'SIGNOUT' });
+  navigate('loginFlow');
 };
+
 
 export const { Provider, Context } = createDataContext(
   authReducer,
