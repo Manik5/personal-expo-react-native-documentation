@@ -3,12 +3,13 @@ import { View, StyleSheet, Text } from 'react-native';
 import { Button } from 'react-native-elements';
 import Spacer from '../components/Spacer';
 import { Context as AuthContext } from '../context/AuthContext';
+import { SafeAreaView } from 'react-navigation';
 
 const AccountScreen = props => {
 	const { signout } = useContext(AuthContext);
 
 	return(
-	  <View>
+	  <SafeAreaView forceInset={{ top: 'always' }}>
 	    <Text>AccountScreen</Text>
 			<Spacer>
 				<Button
@@ -16,7 +17,7 @@ const AccountScreen = props => {
 					onPress={signout}
 				/>
 			</Spacer>
-	  </View>
+	  </SafeAreaView>
 	)
 };
 
